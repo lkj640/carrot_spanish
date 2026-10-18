@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "당근 스페인어 스터디",
+    "tagline": "왕초보부터 함께하는 일요일 아침 스페인어",
+    "source": "Easy Spanish Podcast (YouTube)",
+    "sourceUrl": "https://www.youtube.com/channel/UCvqBmDu7Y3e1zFsAx3JVCig"
+  },
+  "defaults": {
+    "day": "매주 일요일",
+    "time": "오전 10:00",
+    "place": "이디야커피 일산허유재병원",
+    "mapUrl": "https://map.naver.com/p/search/%EC%9D%B4%EB%94%94%EC%95%BC%EC%BB%A4%ED%94%BC%20%EC%9D%BC%EC%82%B0%ED%97%88%EC%9C%A0%EC%9E%AC%EB%B3%91%EC%9B%90",
+    "bring": "함께 즐겁게 공부하고 싶은 마음가짐"
+  },
+  "meetings": [
+    {
+      "date": "2026-10-25",
+      "ep": 6,
+      "level": "A1",
+      "emoji": "🍕",
+      "title": "좋아하는 음식 말하기",
+      "es": "¡Me encanta la pizza!",
+      "duration": "21:55",
+      "youtube": "F9zOIHrW88M",
+      "audio": "audio.mp3",
+      "pdf": "workbook.pdf",
+      "workbookHtml": "workbook.html",
+      "topics": ["¿Cuál es tu comida favorita?", "Me gusta / Me encanta / No me gusta", "맛·온도 형용사 (rico, dulce, salado…)", "comer · beber · cenar", "카를로스와 아나 이야기 듣기"],
+      "notice": "이번 주에는 좋아하는 음식을 스페인어로 소개해 봐요. 모임 전에 '듣기'를 한 번 듣고, 교재 마지막 장의 '나의 음식 소개'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!"
+    },
+    {
+      "date": "2026-10-18",
+      "ep": 1,
+      "level": "A1",
+      "emoji": "👋",
+      "title": "스페인어로 자기소개하기",
+      "es": "¡Hola! Me llamo…",
+      "duration": "11:17",
+      "youtube": "Hue5ffnsTLc",
+      "audio": "audio.mp3",
+      "pdf": "workbook.pdf",
+      "pages": 19,
+      "topics": ["인사하기 · 안부 묻기", "이름 말하기 · 알파벳", "출신 국가 · 직업 · 나이", "숫자 1–60", "짧은 이야기 · 나의 자기소개"],
+      "notice": "인사, 이름, 출신, 직업, 나이로 스페인어 자기소개를 완성해 봐요. 모임 전에 '듣기'를 한 번 들어 오세요!"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>모임 자료 · 당근 스페인어 스터디</title>
+<meta property="og:title" content="당근 스페인어 스터디 · 모임 자료">
+<meta property="og:description" content="문장을 누르면 그 부분부터 재생 · 한국어 번역 · 학습 교재 · 단어장">
+<meta name="theme-color" content="#c0392b">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇪🇸</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="stripe"></div>
+<div class="topbar"><div class="wrap">
+  <div class="row"><a class="back" href="./">‹ 홈</a><div class="ttl" id="ttl"></div></div>
+  <div class="tabs" role="tablist">
+    <button role="tab" data-tab="listen" aria-selected="true">🎧 듣기</button>
+    <button role="tab" data-tab="book" aria-selected="false">📘 교재</button>
+    <button role="tab" data-tab="vocab" aria-selected="false">📝 단어장</button>
+  </div>
+</div></div>
+
+<div class="wrap">
+  <div class="hero" id="hero"></div>
+
+  <section class="pane on" id="pane-listen">
+    <div class="src" id="srcSel">
+      <button data-src="yt" aria-pressed="true">▶ 유튜브로 듣기</button>
+      <button data-src="mp3" aria-pressed="false">🎧 MP3로 듣기</button>
+    </div>
+    <div class="ytbox" id="ytbox"><div id="yt"></div></div>
+    <p class="hint" id="srcHint"></p>
+    <div class="opts">
+      <label><input type="checkbox" id="optKo" checked> 한국어 번역</label>
+      <label><input type="checkbox" id="optScroll" checked> 자동 스크롤</label>
+      <label><input type="checkbox" id="optLoop"> 현재 문장 반복</label>
+    </div>
+    <select class="jump" id="jump" aria-label="구간 이동"></select>
+    <div id="lines"></div>
+  </section>
+
+  <section class="pane" id="pane-book">
+    <div class="wbtools" id="wbtools"></div>
+    <div id="wb"></div>
+  </section>
+
+  <section class="pane" id="pane-vocab">
+    <div class="vtools">
+      <button id="vHide" aria-pressed="false">🙈 뜻 가리기</button>
+      <button id="vUndone" aria-pressed="false">✅ 외운 단어 숨기기</button>
+    </div>
+    <div class="vprog" id="vprog"></div>
+    <div id="vlist"></div>
+  </section>
+</div>
+
+<audio id="au" preload="metadata"></audio>
+<div class="bar"><div class="bar-in">
+  <div class="now" id="now">문장을 누르거나 ▶ 버튼을 눌러 재생하세요.</div>
+  <div class="ctrl">
+    <button class="skip" id="btnPrev" aria-label="이전 문장">⏮</button>
+    <button class="play" id="btnPlay" aria-label="재생">▶</button>
+    <button class="skip" id="btnNext" aria-label="다음 문장">⏭</button>
+    <span class="time" id="cur">0:00</span>
+    <input type="range" id="seek" min="0" max="0" step="0.1" value="0" aria-label="재생 위치">
+    <span class="time" id="dur">0:00</span>
+    <select id="rate" aria-label="재생 속도"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option></select>
+  </div>
+</div></div>
+
+<script src="assets/common.js"></script>
+<script src="assets/meeting.js"></script>
+</body>
+</html>
