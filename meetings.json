@@ -26,7 +26,20 @@
       "pdf": "workbook.pdf",
       "workbookHtml": "workbook.html",
       "topics": ["¿Cuál es tu comida favorita?", "Me gusta / Me encanta / No me gusta", "맛·온도 형용사 (rico, dulce, salado…)", "comer · beber · cenar", "카를로스와 아나 이야기 듣기"],
-      "notice": "이번 주에는 좋아하는 음식을 스페인어로 소개해 봐요. 모임 전에 '듣기'를 한 번 듣고, 교재 마지막 장의 '나의 음식 소개'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!"
+      "notice": "이번 주에는 좋아하는 음식을 스페인어로 소개해 봐요. 모임 전에 '듣기'를 한 번 듣고, 교재 마지막 장의 '나의 음식 소개'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!",
+      "extras": [
+        {
+          "id": "frutas",
+          "short": "과일 단어",
+          "emoji": "🍎",
+          "level": "A1",
+          "title": "과일 단어 24개 · 예문",
+          "es": "Vocabulario: Frutas",
+          "channel": "엘라르테 ELArte",
+          "duration": "9:40",
+          "youtube": "6lFHRBpwo8k"
+        }
+      ]
     },
     {
       "date": "2026-10-18",
