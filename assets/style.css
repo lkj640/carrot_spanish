@@ -54,6 +54,12 @@ footer{color:var(--mut);font-size:12.5px;padding:20px 0 40px;border-top:1px soli
 .hero{padding:16px 0 4px}
 .hero h1{font-size:22px;margin:6px 0 2px;letter-spacing:-.3px}
 .hero .es{color:var(--red);font-weight:700}
+.mats{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.mats a{font-size:13px;font-weight:700;padding:5px 11px;border-radius:999px;border:1.5px solid var(--line);color:var(--mut);text-decoration:none}
+.mats a[aria-current]{border-color:var(--red);color:var(--red);background:color-mix(in srgb,var(--red) 8%,transparent)}
+.extras{display:grid;gap:6px;margin-top:12px}
+.extras a{display:flex;gap:10px;align-items:center;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;text-decoration:none;color:inherit}
+.extras .t{font-weight:700;font-size:14.5px}.extras .d{font-size:13px;color:var(--mut)}.extras .em{font-size:22px}
 .pane{display:none;padding-bottom:150px}.pane.on{display:block}
 .src{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px;margin:12px 0}
 .src button{font-family:inherit;font-weight:700;font-size:14.5px;height:40px;border:0;border-radius:9px;background:transparent;color:var(--mut);cursor:pointer}

@@ -12,6 +12,7 @@ import html, json, re, sys
 
 def from_src(d):
     sys.path.insert(0, d)
+    import lines
     from lines import L
     from vocab import VOCAB
     T = {int(k): v for k, v in json.load(open(f"{d}/times.json")).items()}
@@ -22,7 +23,7 @@ def from_src(d):
         else:
             secs[-1]["lines"].append({"s": x[0], "t": T[i], "es": x[1], "ko": x[2]})
     vocab = [{"title": t, "rows": [list(r) for r in rows]} for t, rows in VOCAB]
-    return secs, vocab
+    return secs, vocab, getattr(lines, "SPEAKERS", None)
 
 
 def from_html(p):
@@ -41,11 +42,12 @@ def from_html(p):
         rows = [[html.unescape(a), html.unescape(b)] for a, b in
                 re.findall(r'<td class="w">(.*?)</td><td class="">(.*?)</td>', tb)]
         vocab.append({"title": html.unescape(t), "rows": rows})
-    return secs, vocab
+    return secs, vocab, None
 
 
 if __name__ == "__main__":
     mode, src, out = sys.argv[1:4]
-    secs, vocab = from_src(src) if mode == "src" else from_html(src)
-    json.dump({"sections": secs, "vocab": vocab}, open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    secs, vocab, speakers = from_src(src) if mode == "src" else from_html(src)
+    # 화자 이름(기본 S=Sofía, M=Mateo)을 바꾸려면 lines.py에 SPEAKERS = {"S": "…", "M": "…"}
+    json.dump({**({"speakers": speakers} if speakers else {}), "sections": secs, "vocab": vocab}, open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     print(out, sum(len(s["lines"]) for s in secs), "lines,", len(secs), "sections,", sum(len(v["rows"]) for v in vocab), "words")

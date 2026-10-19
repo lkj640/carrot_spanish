@@ -26,6 +26,9 @@
       </dl>
       ${next.notice ? `<div class="msg">${esc(next.notice)}</div>` : ""}
       ${next.topics ? `<b style="font-size:14px">이번 주에 배울 내용</b><ul class="topics">${next.topics.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
+      ${next.extras && next.extras.length ? `<b style="font-size:14px;display:block;margin-top:14px">추가 자료</b><div class="extras">${next.extras.map((e, i) => `<a href="${link(next)}&x=${encodeURIComponent(e.id)}">
+          <span class="em">${esc(e.emoji || "📎")}</span><span><span class="d">자료 ${i + 2}${e.channel ? " · " + esc(e.channel) : ""}${e.duration ? " · " + esc(e.duration) : ""}</span><br>
+          <span class="t">${esc(e.title)}</span><br><span class="d">${esc(e.es || "")}</span></span></a>`).join("")}</div>` : ""}
       <div class="btns">
         <a class="btn primary" href="${link(next)}#listen">🎧 예습하기</a>
         <a class="btn ghost" href="${link(next)}#book">📘 교재 보기</a>
@@ -42,7 +45,7 @@
   const item = (m, chip) => `<a class="mitem" href="${link(m)}">
       <div class="em">${esc(m.emoji || "📗")}</div>
       <div><div class="d">${fmtDate(m.date)} · Ep.${esc(m.ep)} ${chip}</div>
-      <div class="t">${esc(m.title)}</div><div class="d">${esc(m.es || "")}</div></div>
+      <div class="t">${esc(m.title)}</div><div class="d">${esc(m.es || "")}${m.extras && m.extras.length ? ` · 📎 추가 자료 ${m.extras.length}개` : ""}</div></div>
       <div class="go">›</div></a>`;
   const upcoming = list.filter(m => isUpcoming(m.date, today) && m !== next);
   const past = list.filter(m => !isUpcoming(m.date, today)).reverse();

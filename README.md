@@ -40,6 +40,13 @@
   "notice": "이번 주 공지 문구"
 }
 ```
+추가 자료(다른 유튜브 영상)를 붙이려면 그 모임 항목에 `"extras"` 배열을 넣어요. 자료는 `meetings/<날짜>/<id>/data.json`에 두고 `meeting.html?d=<날짜>&x=<id>`로 열려요. 공지 카드와 모임 페이지에 '자료 2, 3…'으로 나와요.
+```json
+"extras": [{ "id": "frutas", "short": "과일 단어", "emoji": "🍎", "title": "과일 단어 24개 · 예문",
+  "es": "Vocabulario: Frutas", "channel": "엘라르테 ELArte", "duration": "9:40", "youtube": "6lFHRBpwo8k" }]
+```
+자료 만들기는 같아요: `tools/<날짜>-<id>/`에 `lines.py`·`vocab.py`·`times.json` → `make_data.py`. 화자 이름을 바꾸려면 `lines.py`에 `SPEAKERS = {"S": "단어", "M": "예문"}`.
+
 시간·장소·준비물을 그 주만 바꾸려면 항목에 `"time"`, `"place"`, `"mapUrl"`, `"bring"`을 넣으면 돼요.
 
 ## 음원에 대해

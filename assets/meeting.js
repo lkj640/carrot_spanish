@@ -6,18 +6,29 @@
   // ---------- 모임 정보 ----------
   const site = await load().catch(() => null);
   const date = new URLSearchParams(location.search).get("d");
-  const m = site && site.meetings.find(x => x.date === date);
-  if (!m) { $("hero").innerHTML = '<h1>모임을 찾을 수 없어요</h1><p><a href="./">홈으로 돌아가기</a></p>'; document.querySelectorAll(".pane,.bar,.tabs").forEach(e => e.remove()); return; }
-  const base = `meetings/${m.date}/`;
+  const qs = new URLSearchParams(location.search);
+  const mm = site && site.meetings.find(x => x.date === date);
+  // 추가 자료: meeting.html?d=날짜&x=자료id → meetings/<날짜>/<자료id>/data.json
+  const ex = mm && qs.get("x") ? (mm.extras || []).find(e => e.id === qs.get("x")) : null;
+  const m = ex ? { date: mm.date, ep: mm.ep, ...ex } : mm;
+  if (!m || (qs.get("x") && !ex)) { $("hero").innerHTML = '<h1>모임을 찾을 수 없어요</h1><p><a href="./">홈으로 돌아가기</a></p>'; document.querySelectorAll(".pane,.bar,.tabs").forEach(e => e.remove()); return; }
+  const base = `meetings/${m.date}/` + (ex ? ex.id + "/" : "");
+  const channel = m.channel || "Easy Spanish Podcast";
   document.title = `${fmtDate(m.date)} · ${m.title} · 당근 스페인어 스터디`;
-  $("ttl").textContent = `${fmtDate(m.date)} · Ep.${m.ep}`;
-  $("hero").innerHTML = `<span class="chip yel">Easy Spanish Podcast · Ep.${esc(m.ep)} · ${esc(m.level || "A1")}${m.duration ? " · " + esc(m.duration) : ""}</span>
-    <h1>${esc(m.emoji || "")} ${esc(m.title)}</h1><div class="es">${esc(m.es || "")}</div>`;
+  $("ttl").textContent = `${fmtDate(m.date)} · ` + (ex ? `자료 ${mm.extras.indexOf(ex) + 2}` : `Ep.${m.ep}`);
+  // 같은 모임의 자료(본 자료 + 추가 자료) 사이를 오가는 버튼
+  const mats = mm.extras && mm.extras.length ? [{ href: `meeting.html?d=${mm.date}`, on: !ex, label: `${mm.emoji || ""} 자료 1 · Ep.${mm.ep}` },
+    ...mm.extras.map((e, i) => ({ href: `meeting.html?d=${mm.date}&x=${encodeURIComponent(e.id)}`, on: ex === e, label: `${e.emoji || "📎"} 자료 ${i + 2}${e.short ? " · " + e.short : ""}` }))] : [];
+  $("hero").innerHTML = `<span class="chip yel">${esc(channel)}${ex ? "" : " · Ep." + esc(m.ep)} · ${esc(m.level || "A1")}${m.duration ? " · " + esc(m.duration) : ""}</span>
+    <h1>${esc(m.emoji || "")} ${esc(m.title)}</h1><div class="es">${esc(m.es || "")}</div>
+    ${mats.length ? `<nav class="mats">${mats.map(x => `<a href="${x.href}"${x.on ? ' aria-current="page"' : ""}>${esc(x.label)}</a>`).join("")}</nav>` : ""}`;
+  // 교재가 없는 자료는 교재 탭을 숨겨요.
+  if (!m.pdf && !m.workbookHtml && !m.pages) document.querySelector('.tabs [data-tab="book"]').remove();
 
   // ---------- 탭 ----------
   const tabs = [...document.querySelectorAll(".tabs button")];
   function showTab(name) {
-    if (!["listen", "book", "vocab"].includes(name)) name = "listen";
+    if (!tabs.some(b => b.dataset.tab === name)) name = "listen";
     tabs.forEach(b => b.setAttribute("aria-selected", b.dataset.tab === name));
     document.querySelectorAll(".pane").forEach(p => p.classList.toggle("on", p.id === "pane-" + name));
     if (name === "book") loadBook();
@@ -28,12 +39,13 @@
 
   // ---------- 대본 ----------
   const data = await fetch(base + "data.json").then(r => r.json());
+  const who = Object.assign({ S: "Sofía", M: "Mateo" }, data.speakers);
   let html = "", opts = '<option value="">📍 구간으로 이동…</option>', n = 0;
   data.sections.forEach((s, si) => {
     html += `<h2 class="secT" id="sec${si}">${esc(s.title)}</h2>`;
     opts += `<option value="${si}">${esc(s.title)}</option>`;
     for (const l of s.lines) {
-      html += `<div class="line ${l.s}" data-i="${n++}" data-t="${l.t}"><div class="who">${l.s === "S" ? "Sofía" : "Mateo"}<span class="ts">${fmt(l.t)}</span></div>
+      html += `<div class="line ${l.s}" data-i="${n++}" data-t="${l.t}"><div class="who">${esc(who[l.s] || l.s)}<span class="ts">${fmt(l.t)}</span></div>
         <div class="txt"><div class="es">${esc(l.es)}</div><div class="ko">${esc(l.ko)}</div></div></div>`;
     }
   });
@@ -104,7 +116,7 @@
     document.querySelectorAll("#srcSel button").forEach(b => b.setAttribute("aria-pressed", b.dataset.src === mode));
     $("ytbox").style.display = mode === "yt" ? "" : "none";
     $("srcHint").innerHTML = mode === "yt"
-      ? `유튜브 공식 영상(<a href="https://www.youtube.com/watch?v=${esc(m.youtube)}" target="_blank" rel="noopener">Easy Spanish Podcast</a>)으로 재생해요. 화면을 끄면 멈출 수 있어요.`
+      ? `유튜브 공식 영상(<a href="https://www.youtube.com/watch?v=${esc(m.youtube)}" target="_blank" rel="noopener">${esc(channel)}</a>)으로 재생해요. 화면을 끄면 멈출 수 있어요.`
       : "MP3로 재생해요. 화면을 꺼도 계속 들을 수 있어요.";
     if (mode === "mp3" && !au.src) au.src = base + m.audio;
     if (mode === "yt") ensureYT();
@@ -200,7 +212,7 @@
   }
 
   // ---------- 단어장 ----------
-  const vkey = "cs_vocab_" + m.date;
+  const vkey = "cs_vocab_" + m.date + (ex ? "_" + ex.id : "");
   const known = new Set(store.get(vkey, []));
   let vh = "";
   data.vocab.forEach((g, gi) => {
