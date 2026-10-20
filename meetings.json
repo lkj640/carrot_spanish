@@ -14,6 +14,20 @@
   },
   "meetings": [
     {
+      "date": "2026-11-01",
+      "ep": 18,
+      "level": "A1",
+      "emoji": "🙋",
+      "title": "나에 대해 말하기",
+      "es": "¿Quién eres? — Me llamo…",
+      "duration": "13:02",
+      "youtube": "OigJ2o54hsA",
+      "pdf": "workbook.pdf",
+      "workbookHtml": "workbook.html",
+      "topics": ["이름과 나이 · Me llamo / Tengo … años", "출신과 사는 곳 · Soy de / Vivo en", "일 · 공부 · 언어 (-ar 동사)", "형제자매와 취미 · Me gusta + 동사원형", "성격 · Soy tranquilo/a", "5–7문장 자기소개 완성하기"],
+      "notice": "A1 학습 순서 3주차예요. 이름·나이·출신·사는 곳·일·취미까지 스페인어로 자기소개를 완성해 봐요. 모임 전에 '듣기'를 한 번 듣고, 교재 마지막 장의 '나의 자기소개'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!"
+    },
+    {
       "date": "2026-10-25",
       "ep": 6,
       "level": "A1",
