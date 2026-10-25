@@ -14,6 +14,20 @@
   },
   "meetings": [
     {
+      "date": "2026-11-08",
+      "ep": 7,
+      "level": "A1",
+      "emoji": "🤝",
+      "title": "가장 친한 친구 소개하기",
+      "es": "Mi mejor amigo se llama Pablo.",
+      "duration": "23:09",
+      "youtube": "cq43MjI7AZE",
+      "pdf": "workbook.pdf",
+      "workbookHtml": "workbook.html",
+      "topics": ["Mi mejor amigo / mi mejor amiga se llama …", "Tiene … años · Vive en …", "성격과 외모 · Es muy amable / Es alto", "함께 하는 일 · Vemos películas / Salimos juntos", "이유 말하기 · porque me escucha", "라우라와 아나 · 후안과 루이스 이야기 듣기"],
+      "notice": "A1 학습 순서 4주차예요. 이번 주에는 가장 친한 친구를 스페인어로 소개해 봐요. 23분으로 길어서 두 번에 나눠 들어도 좋아요. 교재 마지막 장의 '나의 가장 친한 친구 소개'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!"
+    },
+    {
       "date": "2026-11-01",
       "ep": 4,
       "level": "A1",
