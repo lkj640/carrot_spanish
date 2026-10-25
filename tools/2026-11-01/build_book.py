@@ -143,7 +143,7 @@ P.append(lesson(2, rng(4, 6), "형제자매와 가족 수", "팟캐스트 4. 형
 <p><b>¿Cuántas personas hay en tu familia?</b><br>가족이 몇 명이에요? (persona는 여성 → cuánt<b>as</b>)<br><b>¿Cuántos hermanos tienes?</b> 형제가 몇 명이에요?</p></div>
 <div class="box y"><b>대답하기</b>
 <p><b>Somos cuatro.</b> 우리는 네 명이에요. (ser → nosotros <b>somos</b>)<br>Mi padre, mi madre, mi hermano y yo. 아빠, 엄마, 형(동생), 그리고 나.</p></div></div>
-<div class="note y"><b>한국어의 형·오빠·누나·언니는?</b> 스페인어는 나이로 부르지 않아요. 필요하면 <b>mayor</b>(나이 많은) / <b>menor</b>(어린)를 붙여요: <b>mi hermano mayor</b> 형/오빠 · <b>mi hermana menor</b> 여동생 (4주차 Ep.18에서 다시 나와요)</div>"""
+<div class="note y"><b>한국어의 형·오빠·누나·언니는?</b> 스페인어는 나이로 부르지 않아요. 필요하면 <b>mayor</b>(나이 많은) / <b>menor</b>(어린)를 붙여요: <b>mi hermano mayor</b> 형/오빠 · <b>mi hermana menor</b> 여동생</div>"""
  + h("연습 A", "그림을 보고 문장을 완성하세요.")
  + blanks([f"👦 → Tengo {B}.", f"👧 → Tengo {B}.", f"👦👦 → Tengo {B}.", f"🙅 → {B}.", f"👨👩👦🧑 → Somos {B}."])
  + h("연습 B", "알맞은 말을 고르세요.")

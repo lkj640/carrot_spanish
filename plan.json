@@ -1,6 +1,6 @@
 {
  "title": "스페인어 A1 학습 순서",
- "source": "Easy Spanish Podcast · A1 플레이리스트 28편",
+ "source": "Easy Spanish Podcast · A1 플레이리스트 (Ep.18 제외 27편)",
  "playlist": "https://www.youtube.com/playlist?list=PLOfKr-QFX3fDemcK8md6uwDa81ahue_m8",
  "start": "2026-10-18",
  "note": "매주 한 편씩 이 순서대로 함께 공부해요. 모임 날짜는 사정에 따라 바뀔 수 있어요.",
@@ -36,10 +36,11 @@
     },
     {
      "week": 4,
-     "ep": 18,
-     "youtube": "OigJ2o54hsA",
-     "emoji": "🙋",
-     "title": "나에 대해 말하기"
+     "ep": 7,
+     "youtube": "cq43MjI7AZE",
+     "emoji": "🤝",
+     "title": "가장 친한 친구",
+     "tip": "23분으로 길어서 두 번에 나눠 들어도 좋아요."
     },
     {
      "week": 5,
@@ -47,14 +48,6 @@
      "youtube": "nBDGgH1oyTs",
      "emoji": "👪",
      "title": "부모님 이야기"
-    },
-    {
-     "week": 6,
-     "ep": 7,
-     "youtube": "cq43MjI7AZE",
-     "emoji": "🤝",
-     "title": "가장 친한 친구",
-     "tip": "23분으로 길어서 두 번에 나눠 들어도 좋아요."
     }
    ]
   },
@@ -62,28 +55,28 @@
    "title": "2단계 · 시간 표현",
    "weeks": [
     {
-     "week": 7,
+     "week": 6,
      "ep": 23,
      "youtube": "xaFnbcYNnAg",
      "emoji": "📅",
      "title": "요일"
     },
     {
-     "week": 8,
+     "week": 7,
      "ep": 25,
      "youtube": "FaB9N8OTUZk",
      "emoji": "🗓️",
      "title": "열두 달"
     },
     {
-     "week": 9,
+     "week": 8,
      "ep": 2,
      "youtube": "9wXUyjjYmmg",
      "emoji": "☀️",
      "title": "나의 하루"
     },
     {
-     "week": 10,
+     "week": 9,
      "ep": 5,
      "youtube": "Tw-c7QKWjco",
      "emoji": "⏰",
@@ -95,28 +88,28 @@
    "title": "3단계 · 일과와 생활 확장",
    "weeks": [
     {
-     "week": 11,
+     "week": 10,
      "ep": 8,
      "youtube": "nFMGIFzmpeA",
      "emoji": "🥐",
      "title": "아침 식사"
     },
     {
-     "week": 12,
+     "week": 11,
      "ep": 16,
      "youtube": "LTCUOqxcUw4",
      "emoji": "🌙",
      "title": "저녁 루틴"
     },
     {
-     "week": 13,
+     "week": 12,
      "ep": 13,
      "youtube": "dvyyUhlLkDY",
      "emoji": "🎉",
      "title": "주말 이야기"
     },
     {
-     "week": 14,
+     "week": 13,
      "ep": 15,
      "youtube": "3dx5ktyTCqM",
      "emoji": "🌦️",
@@ -128,35 +121,35 @@
    "title": "4단계 · 집과 학교",
    "weeks": [
     {
-     "week": 15,
+     "week": 14,
      "ep": 5,
      "youtube": "ZVIUQOq6lK8",
      "emoji": "🏠",
      "title": "우리 집 (1)"
     },
     {
-     "week": 16,
+     "week": 15,
      "ep": 22,
      "youtube": "WbPHR-Djkew",
      "emoji": "🏡",
      "title": "우리 집 (2)"
     },
     {
-     "week": 17,
+     "week": 16,
      "ep": 14,
      "youtube": "X_HuTQ5p9Yo",
      "emoji": "🛏️",
      "title": "내 방 소개"
     },
     {
-     "week": 18,
+     "week": 17,
      "ep": 9,
      "youtube": "OFBu3FQlcew",
      "emoji": "🏫",
      "title": "우리 학교"
     },
     {
-     "week": 19,
+     "week": 18,
      "ep": 27,
      "youtube": "BjE8do5rkvE",
      "emoji": "✏️",
@@ -168,35 +161,35 @@
    "title": "5단계 · 취미, 직업, 나라",
    "weeks": [
     {
-     "week": 20,
+     "week": 19,
      "ep": 20,
      "youtube": "hnN81MY6RKE",
      "emoji": "🎨",
      "title": "취미"
     },
     {
-     "week": 21,
+     "week": 20,
      "ep": 12,
      "youtube": "ymA1RgqYCbk",
      "emoji": "⚽",
      "title": "좋아하는 스포츠"
     },
     {
-     "week": 22,
+     "week": 21,
      "ep": 10,
      "youtube": "7hweQZ3zj3A",
      "emoji": "🐶",
      "title": "좋아하는 동물"
     },
     {
-     "week": 23,
+     "week": 22,
      "ep": 17,
      "youtube": "hHwI2U49cDE",
      "emoji": "💼",
      "title": "직업"
     },
     {
-     "week": 24,
+     "week": 23,
      "ep": 11,
      "youtube": "Q0QGMUdC0ys",
      "emoji": "🌎",
@@ -208,28 +201,28 @@
    "title": "6단계 · 실전 상황과 마무리",
    "weeks": [
     {
-     "week": 25,
+     "week": 24,
      "ep": 3,
      "youtube": "bjfPMdsd8Xc",
      "emoji": "🛍️",
      "title": "쇼핑하기"
     },
     {
-     "week": 26,
+     "week": 25,
      "ep": 26,
      "youtube": "AFM1WfH7z00",
      "emoji": "💶",
      "title": "가격 묻기"
     },
     {
-     "week": 27,
+     "week": 26,
      "ep": 24,
      "youtube": "sR7ksZd9pjU",
      "emoji": "🩺",
      "title": "병원 가기"
     },
     {
-     "week": 28,
+     "week": 27,
      "ep": 21,
      "youtube": "rDL7fvS-flw",
      "emoji": "✨",
