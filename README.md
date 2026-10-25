@@ -9,9 +9,9 @@
 | 파일 | 역할 |
 |---|---|
 | `index.html` | 첫 화면 — 다음 모임 공지 + 모임 목록 |
-| `meeting.html?d=YYYY-MM-DD` | 모임별 페이지 — 듣기(유튜브/MP3) · 교재 · 단어장 |
+| `meeting.html?d=YYYY-MM-DD` | 모임별 페이지 — 듣기(유튜브) · 교재 · 단어장 |
 | `meetings.json` | **모임 목록과 공지 내용. 매주 여기에 한 항목만 추가하면 돼요.** |
-| `meetings/<날짜>/` | `data.json`(대본·번역·단어), `audio.mp3`, `workbook.pdf`, `workbook.html` 또는 `pages/*.jpg` |
+| `meetings/<날짜>/` | `data.json`(대본·번역·단어), `workbook.pdf`, `workbook.html` 또는 `pages/*.jpg` |
 | `assets/` | 공통 디자인(`style.css`)과 화면 코드 |
 | `tools/` | 자료 만드는 스크립트 (아래 참고) |
 
@@ -19,13 +19,12 @@
 
 ## 매주 새 모임 올리기
 
-1. 원본 폴더(`../<날짜>/`)에 팟캐스트 mp3와 유튜브 대본 txt를 넣어요.
+1. 유튜브 영상의 스페인어 자막(대본)과 단어별 시간을 준비해요. (3주차부터는 영상 자막에서 바로 가져왔어요: `tools/2026-11-01/`)
 2. 자료 만들기 (Claude에게 "○월 ○일 모임 자료 만들어서 사이트에 올려줘"라고 부탁해도 돼요)
    - `tools/asr.py`로 음성 인식 → `tools/align.py`로 문장별 시작 시간 맞추기
    - `tools/<날짜>/lines.py`(문장·번역), `vocab.py`(단어), `times.json`(시간)
    - `python3 tools/make_data.py src tools/<날짜> meetings/<날짜>/data.json`
    - 교재: `tools/<날짜>/build_book.py` → `workbook.html` → Chrome으로 PDF 저장
-   - 음성: `ffmpeg -i 원본.mp3 -ac 1 -b:a 48k meetings/<날짜>/audio.mp3`
 3. `meetings.json`의 `meetings` 배열에 항목 추가 (`youtube`에는 영상 ID, 예: `F9zOIHrW88M`)
 4. `git add . && git commit -m "○월 ○일 모임 추가" && git push`
 
@@ -35,7 +34,7 @@
   "date": "2026-11-01", "ep": 7, "level": "A1", "emoji": "🏠",
   "title": "모임 주제", "es": "대표 스페인어 문장",
   "duration": "20:00", "youtube": "영상ID",
-  "audio": "audio.mp3", "pdf": "workbook.pdf", "workbookHtml": "workbook.html",
+  "pdf": "workbook.pdf", "workbookHtml": "workbook.html",
   "topics": ["배울 내용 1", "배울 내용 2"],
   "notice": "이번 주 공지 문구"
 }
@@ -58,4 +57,4 @@ Easy Spanish Podcast A1 플레이리스트에서 겹치는 주제를 하나로 �
 
 ## 음원에 대해
 
-듣기 기본값은 Easy Spanish Podcast 공식 유튜브 영상을 페이지에 넣어 재생하는 방식이에요. MP3 듣기를 빼려면 해당 모임 항목에서 `"audio"` 줄을 지우고 mp3 파일을 삭제하면 돼요.
+듣기는 Easy Spanish Podcast 공식 유튜브 영상을 페이지에 넣어 재생해요. 저작권 때문에 MP3 파일은 올리지 않아요. (2026-10-25에 1·2주차 MP3를 내렸어요. 이 채널은 Spotify·Apple 팟캐스트에는 없어요.)
