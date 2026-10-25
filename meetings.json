@@ -14,6 +14,20 @@
   },
   "meetings": [
     {
+      "date": "2026-11-15",
+      "ep": 23,
+      "level": "A1",
+      "emoji": "📅",
+      "title": "요일과 나의 일주일",
+      "es": "Hoy es lunes. ¡Por fin es viernes!",
+      "duration": "10:22",
+      "youtube": "xaFnbcYNnAg",
+      "pdf": "workbook.pdf",
+      "workbookHtml": "workbook.html",
+      "topics": ["¿Qué día es hoy? — Hoy es lunes", "el lunes (월요일에) · los lunes (월요일마다)", "요일마다 하는 일 · trabajo / hago deporte / veo a mis amigos", "가장 좋아하는 요일과 이유 · porque …", "어제 · 약속 잡기 · ¿Café el miércoles? — Puedo", "나의 일주일 5–7문장으로 말하기"],
+      "notice": "A1 학습 순서 5주차예요. 이번 주에는 요일을 배우고 나의 일주일을 스페인어로 말해 봐요. 10분짜리라 부담 없어요! 교재 마지막 장의 '나의 일주일'을 채워 오시면 모임에서 한 명씩 발표해 볼게요."
+    },
+    {
       "date": "2026-11-08",
       "ep": 7,
       "level": "A1",
