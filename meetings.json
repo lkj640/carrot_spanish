@@ -15,6 +15,20 @@
   "meetings": [
     {
       "date": "2026-11-01",
+      "ep": 4,
+      "level": "A1",
+      "emoji": "👨‍👩‍👧",
+      "title": "가족 소개하기",
+      "es": "Mi familia es pequeña.",
+      "duration": "18:18",
+      "youtube": "CBW-UM7swwk",
+      "pdf": "workbook.pdf",
+      "workbookHtml": "workbook.html",
+      "topics": ["Mi familia es grande / pequeña", "부모님 이름 · Mi padre se llama …", "형제자매 · Tengo un hermano / No tengo hermanos", "가족 수 · Somos cuatro", "자녀 · 조부모 · Vivo con mi familia", "라우라와 하비에르의 가족 이야기 듣기"],
+      "notice": "A1 학습 순서 3주차예요. 이번 주에는 스페인어로 가족을 소개해 봐요. 모임 전에 '듣기'를 한 번 듣고, 교재 마지막 장의 '나의 가족 소개'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!"
+    },
+    {
+      "date": "2026-11-08",
       "ep": 18,
       "level": "A1",
       "emoji": "🙋",
@@ -25,7 +39,7 @@
       "pdf": "workbook.pdf",
       "workbookHtml": "workbook.html",
       "topics": ["이름과 나이 · Me llamo / Tengo … años", "출신과 사는 곳 · Soy de / Vivo en", "일 · 공부 · 언어 (-ar 동사)", "형제자매와 취미 · Me gusta + 동사원형", "성격 · Soy tranquilo/a", "5–7문장 자기소개 완성하기"],
-      "notice": "A1 학습 순서 3주차예요. 이름·나이·출신·사는 곳·일·취미까지 스페인어로 자기소개를 완성해 봐요. 모임 전에 '듣기'를 한 번 듣고, 교재 마지막 장의 '나의 자기소개'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!"
+      "notice": "A1 학습 순서 4주차예요. 지난주 가족 소개에 이어 이번엔 이름·나이·출신·사는 곳·일·취미까지 스페인어로 자기소개를 완성해 봐요. 모임 전에 '듣기'를 한 번 듣고, 교재 마지막 장의 '나의 자기소개'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!"
     },
     {
       "date": "2026-10-25",
