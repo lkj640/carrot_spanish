@@ -14,6 +14,20 @@
   },
   "meetings": [
     {
+      "date": "2026-11-22",
+      "ep": 25,
+      "level": "A1",
+      "emoji": "🗓️",
+      "title": "열두 달과 나의 한 해",
+      "es": "Mi cumpleaños es en mayo.",
+      "duration": "12:54",
+      "youtube": "FaB9N8OTUZk",
+      "pdf": "workbook.pdf",
+      "workbookHtml": "workbook.html",
+      "topics": ["enero ~ diciembre · en + 달 (en mayo)", "¿Cuándo es tu cumpleaños?", "달마다 날씨 · hace frío / hace calor / llueve", "después de / antes de · 달마다 하는 일", "가장 좋아하는 달 · Quiero viajar en junio", "나의 한 해 5–7문장으로 말하기"],
+      "notice": "A1 학습 순서 6주차예요. 지난주 요일에 이어 이번 주에는 열두 달을 배우고 내 생일과 좋아하는 달을 말해 봐요. 교재 마지막 장의 '나의 한 해'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!"
+    },
+    {
       "date": "2026-11-15",
       "ep": 23,
       "level": "A1",
