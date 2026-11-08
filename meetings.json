@@ -14,6 +14,20 @@
   },
   "meetings": [
     {
+      "date": "2026-11-29",
+      "ep": 5,
+      "level": "A1",
+      "emoji": "⏰",
+      "title": "나의 하루 일과",
+      "es": "Me levanto a las siete.",
+      "duration": "17:22",
+      "youtube": "Tw-c7QKWjco",
+      "pdf": "workbook.pdf",
+      "workbookHtml": "workbook.html",
+      "topics": ["아침 일과 · me levanto, me ducho, me visto, desayuno", "시간 말하기 · ¿A qué hora …? — A las ocho y media", "voy al trabajo · como · vuelvo a casa · ceno", "me acuesto · duermo ocho horas", "카를로스와 아나의 하루 듣기", "아침부터 밤까지 나의 하루 말하기"],
+      "notice": "A1 학습 순서 7주차예요. 이번 주에는 아침에 일어나서 잠들 때까지 나의 하루를 스페인어로 말해 봐요. 17분이라 두 번에 나눠 들어도 좋아요. 교재 마지막 장의 '나의 하루'를 채워 오시면 모임에서 한 명씩 발표해 볼게요!"
+    },
+    {
       "date": "2026-11-22",
       "ep": 25,
       "level": "A1",
