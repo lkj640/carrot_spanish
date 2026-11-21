@@ -155,6 +155,7 @@
     if (d && +$("seek").max !== d) { $("seek").max = d; $("dur").textContent = fmt(d); }
     if ($("optLoop").checked && loopIdx >= 0 && !E.paused() && t >= lineEnd(loopIdx) - 0.05) { E.seek(T[loopIdx]); return; }
     if (!seeking) $("seek").value = t;
+    $("seek").style.setProperty("--p", (d ? Math.min(100, +$("seek").value / d * 100) : 0) + "%");
     $("cur").textContent = fmt(t);
     setActive(idxAt(t));
   }, 200);
@@ -170,7 +171,7 @@
   $("btnPlay").onclick = () => E.paused() ? E.play() : E.pause();
   $("btnPrev").onclick = () => playLine((cur < 0 ? 0 : cur) - 1);
   $("btnNext").onclick = () => playLine(cur + 1);
-  $("seek").addEventListener("input", e => { seeking = true; $("cur").textContent = fmt(+e.target.value); });
+  $("seek").addEventListener("input", e => { seeking = true; $("cur").textContent = fmt(+e.target.value); const d = +e.target.max; e.target.style.setProperty("--p", (d ? +e.target.value / d * 100 : 0) + "%"); });
   $("seek").addEventListener("change", e => { E.seek(+e.target.value); seeking = false; loopIdx = idxAt(+e.target.value); });
   $("rate").onchange = e => E.rate(+e.target.value);
   $("optKo").checked = store.get("cs_ko", true);

@@ -60,7 +60,7 @@ footer{color:var(--mut);font-size:12.5px;padding:20px 0 40px;border-top:1px soli
 .extras{display:grid;gap:6px;margin-top:12px}
 .extras a{display:flex;gap:10px;align-items:center;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;text-decoration:none;color:inherit}
 .extras .t{font-weight:700;font-size:14.5px}.extras .d{font-size:13px;color:var(--mut)}.extras .em{font-size:22px}
-.pane{display:none;padding-bottom:150px}.pane.on{display:block}
+.pane{display:none;padding-bottom:120px}.pane.on{display:block}
 .src{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px;margin:12px 0}
 .src button{font-family:inherit;font-weight:700;font-size:14.5px;height:40px;border:0;border-radius:9px;background:transparent;color:var(--mut);cursor:pointer}
 .src button[aria-pressed=true]{background:var(--red);color:#fff}
@@ -81,15 +81,20 @@ h2.secT{font-size:16px;margin:26px 0 8px;padding-bottom:4px;border-bottom:2px so
 .ts{font-weight:400;font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums}
 .es{font-weight:600;font-size:16px}.ko{color:var(--mut);font-size:14.5px;margin-top:2px}
 body.noko .ko{display:none}
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bar);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:8px 16px calc(10px + env(safe-area-inset-bottom))}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bar);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:6px 16px calc(8px + env(safe-area-inset-bottom))}
 .bar-in{max-width:760px;margin:0 auto}
-.now{font-size:13px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:6px;min-height:18px}
+.now{font-size:13px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:4px;min-height:17px}
 .ctrl{display:flex;align-items:center;gap:8px}
-.ctrl button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;width:44px;height:44px;font-size:15px;cursor:pointer;flex:0 0 auto;display:flex;align-items:center;justify-content:center}
-.ctrl button.play{background:var(--red);border-color:var(--red);color:#fff;width:50px;height:50px;font-size:18px}
+.ctrl button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;width:32px;height:32px;font-size:12px;cursor:pointer;flex:0 0 auto;display:flex;align-items:center;justify-content:center}
+.ctrl button.play{background:var(--red);border-color:var(--red);color:#fff;width:36px;height:36px;font-size:13px}
 .time{font-size:12px;font-variant-numeric:tabular-nums;color:var(--mut);flex:0 0 auto;min-width:34px;text-align:center}
-input[type=range]{flex:1;min-width:0;accent-color:var(--red);height:28px}
-.ctrl select{font:inherit;font-size:13px;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;height:36px;padding:0 4px;flex:0 0 auto}
+input[type=range]{flex:1;min-width:0;height:22px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer;--p:0%}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:99px;background:linear-gradient(var(--red),var(--red)) 0/var(--p) 100% no-repeat,var(--line)}
+input[type=range]::-moz-range-track{height:4px;border-radius:99px;background:var(--line)}
+input[type=range]::-moz-range-progress{height:4px;border-radius:99px;background:var(--red)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50%;background:var(--red);border:0;margin-top:-4px}
+input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:var(--red);border:0}
+.ctrl select{font:inherit;font-size:13px;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;height:30px;padding:0 4px;flex:0 0 auto}
 @media (max-width:420px){.ctrl .skip{display:none}}
 /* workbook */
 .wbtools{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
