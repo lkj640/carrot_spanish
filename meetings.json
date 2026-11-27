@@ -14,6 +14,20 @@
   },
   "meetings": [
     {
+      "date": "2026-12-06",
+      "ep": 13,
+      "level": "A1",
+      "emoji": "🎉",
+      "title": "주말 이야기",
+      "es": "¿Qué haces el fin de semana?",
+      "duration": "10:59",
+      "youtube": "dvyyUhlLkDY",
+      "pdf": "workbook.pdf",
+      "workbookHtml": "workbook.html",
+      "topics": ["el sábado · el domingo · temprano / tarde", "주말 활동 · hago deporte, voy de compras, me encuentro con amigos", "지난 주말 · fui, vi, hice, comí, dormí", "이번 주말 계획 · voy a + 동사원형", "약속 잡기 · ¿Qué te parece si…? ¿A qué hora?", "나의 주말 5~7문장으로 말하기"],
+      "notice": "A1 학습 순서 8주차예요. 지난주 하루 일과에 이어 이번 주에는 주말에 하는 일, 지난 주말에 한 일, 이번 주말 계획을 스페인어로 말해 봐요. 11분짜리라 부담 없이 들을 수 있어요. 교재 마지막 장의 '나의 주말'을 채워 오시면 모임에서 옆 사람과 약속도 잡아 볼게요!"
+    },
+    {
       "date": "2026-11-29",
       "ep": 5,
       "level": "A1",
